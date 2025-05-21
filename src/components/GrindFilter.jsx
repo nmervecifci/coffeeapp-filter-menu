@@ -1,8 +1,9 @@
-// GrindFilter.jsx
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../context/FilterContext";
 import { filterOptions } from "../data/products";
 
-const GrindFilter = ({ activeFilters, handleFilterChange }) => {
+const GrindFilter = () => {
+  const { activeFilters, handleFilterChange } = useContext(FilterContext);
   const grindFilters = filterOptions.grindFilters || [];
 
   return (

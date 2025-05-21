@@ -1,8 +1,9 @@
-// PriceRangeFilter.jsx
-import React from "react";
+import React, { useContext } from "react";
 import { filterOptions } from "../data/products";
+import { FilterContext } from "../context/FilterContext";
 
-const PriceRangeFilter = ({ activeFilters, handleFilterChange }) => {
+const PriceRangeFilter = () => {
+  const { activeFilters, handleFilterChange } = useContext(FilterContext);
   const priceRangeFilters = filterOptions.priceRangeFilters || [];
 
   return (

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../context/FilterContext";
 import { filterOptions } from "../data/products";
 
-const CategoryFilter = ({ activeFilters, handleFilterChange }) => {
+const CategoryFilter = () => {
+  // Context'ten değerleri al
+  const { activeFilters, handleFilterChange } = useContext(FilterContext);
+
   const featuredFilters = filterOptions.featuredFilters || [];
 
   return (

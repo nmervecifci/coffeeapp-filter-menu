@@ -1,8 +1,9 @@
-// WeightFilter.jsx
-import React from "react";
+import React, { useContext } from "react";
 import { filterOptions } from "../data/products";
+import { FilterContext } from "../context/FilterContext";
 
-const WeightFilter = ({ activeFilters, handleFilterChange }) => {
+const WeightFilter = () => {
+  const { activeFilters, handleFilterChange } = useContext(FilterContext);
   const weightFilters = filterOptions.weightFilters || [];
 
   return (
